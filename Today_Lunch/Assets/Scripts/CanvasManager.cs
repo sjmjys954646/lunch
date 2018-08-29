@@ -101,7 +101,8 @@ public class CanvasManager : MonoBehaviour
     {
         if (Thirdoption_Canvas.transform.GetChild(1).GetComponent<Toggle>().isOn == false &&
             Thirdoption_Canvas.transform.GetChild(2).GetComponent<Toggle>().isOn == false &&
-            Thirdoption_Canvas.transform.GetChild(3).GetComponent<Toggle>().isOn == false
+            Thirdoption_Canvas.transform.GetChild(3).GetComponent<Toggle>().isOn == false &&
+            Thirdoption_Canvas.transform.GetChild(4).GetComponent<Toggle>().isOn == false
             )
         {
             StartCoroutine("Thirdwarning");

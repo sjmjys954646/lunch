@@ -196,7 +196,15 @@ public class CheckManager : MonoBehaviour {
                     Selectedthird.Add(go);
                 }
             });
-        }       
+        }
+
+        if (Third.transform.GetChild(4).GetComponent<Toggle>().isOn == true)
+        {
+            Selectedsecond.ForEach(delegate (Database.Info go)
+            {
+                Selectedthird.Add(go);
+            });
+        }
 
         if (Forth.transform.GetChild(1).GetComponent<Toggle>().isOn == true)
         {
