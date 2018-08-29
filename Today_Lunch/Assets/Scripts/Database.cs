@@ -41,7 +41,16 @@ public class Database : MonoBehaviour
         Shop.Add(new Info(8, "사랑방하우스", "한식", "쪽문", "하", false));
         Shop.Add(new Info(9, "나들목국밥", "한식", "쪽문", "중", false));
         Shop.Add(new Info(10, "파리에다녀온치킨", "치킨", "쪽문", "상", false));
+        Shop.Add(new Info(11, "피가로", "양식", "쪽문", "상", false));
+        Shop.Add(new Info(12, "봉추찜닭", "한식", "쪽문", "상", false));
+        Shop.Add(new Info(13, "예원", "일식", "쪽문", "중/상", false));
+        Shop.Add(new Info(14, "화석시대", "고깃집", "쪽문", "상", false));
+        Shop.Add(new Info(15, "신쭈꾸미", "한식", "쪽문", "중/상", false));
+        Shop.Add(new Info(16, "락희식당", "고깃집", "쪽문", "상", false));
+        Shop.Add(new Info(17, "한솥", "한식", "쪽문", "하", false));
+
     }
+
 }
 
 
