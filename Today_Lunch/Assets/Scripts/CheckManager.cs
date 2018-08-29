@@ -19,7 +19,7 @@ public class CheckManager : MonoBehaviour {
     public int count = 0;
     public int result;
     public Text resulttext;
-
+    public Text numbertext;
     public void StartRoulette()
     {
         if(First.transform.GetChild(1).GetComponent<Toggle>().isOn==true)
@@ -154,11 +154,33 @@ public class CheckManager : MonoBehaviour {
             });
         }
 
+        if (Third.transform.GetChild(1).GetComponent<Toggle>().isOn == true || Third.transform.GetChild(2).GetComponent<Toggle>().isOn == true)
+        {
+            Selectedsecond.ForEach(delegate (Database.Info go)
+            {
+                if (go.Price == "하/중")
+                {
+                    Selectedthird.Add(go);
+                }
+            });
+        }
+
         if (Third.transform.GetChild(2).GetComponent<Toggle>().isOn == true)
         {
             Selectedsecond.ForEach(delegate (Database.Info go)
             {
                 if (go.Price == "중")
+                {
+                    Selectedthird.Add(go);
+                }
+            });
+        }
+
+        if (Third.transform.GetChild(2).GetComponent<Toggle>().isOn == true || Third.transform.GetChild(3).GetComponent<Toggle>().isOn == true)
+        {
+            Selectedsecond.ForEach(delegate (Database.Info go)
+            {
+                if (go.Price == "중/상")
                 {
                     Selectedthird.Add(go);
                 }
@@ -209,7 +231,8 @@ public class CheckManager : MonoBehaviour {
         Debug.Log(count);
         result = Random.Range(0, count);
         Debug.Log(result);
-        resulttext.text = Selectedforth[result].Storename;
 
+        numbertext.text = count + "개 중";
+        resulttext.text = Selectedforth[result].Storename;
     }
 }
