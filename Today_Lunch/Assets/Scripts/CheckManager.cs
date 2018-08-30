@@ -20,7 +20,6 @@ public class CheckManager : MonoBehaviour {
     public int result;
     public Text resulttext;
     public Text numbertext;
-
     public void StartRoulette()
     {
         if(First.transform.GetChild(1).GetComponent<Toggle>().isOn==true)
@@ -243,47 +242,5 @@ public class CheckManager : MonoBehaviour {
 
         numbertext.text = count + "개 중";
         resulttext.text = Selectedforth[result].Storename;
-
-        //area1 - 6142 1217 -2981
-        //area2 - 4398 2600
-        //area3 - 4267 1348
-        //area4 - 2614 2658
-        //area5 - 2561 1555
-        //area6 - 1185 1555
-        //area7 - 1210 2683
-        //area8 - 6274 2482
-
-        if (Selectedforth[result].Area == 1)
-        {
-            Camera.main.transform.position = new Vector3(-6142, 1217, -2981);
-        }
-        if (Selectedforth[result].Area == 2)
-        {
-            Camera.main.transform.position = new Vector3(-4267, 1348, -2981);
-        }
-        if (Selectedforth[result].Area == 3)
-        {
-            Camera.main.transform.position = new Vector3(-4398, 2600, -2981);
-        }
-        if (Selectedforth[result].Area == 4)
-        {
-            Camera.main.transform.position = new Vector3(-2614, 2658, -2981);
-        }
-        if (Selectedforth[result].Area == 5)
-        {
-            Camera.main.transform.position = new Vector3(-2561, 1555, -2981);
-        }
-        if (Selectedforth[result].Area == 6)
-        {
-            Camera.main.transform.position = new Vector3(-1185, 1555, -2981);
-        }
-        if (Selectedforth[result].Area == 7)
-        {
-            Camera.main.transform.position = new Vector3(-1210, 2683, -2981);
-        }
-        if (Selectedforth[result].Area == 8)
-        {
-            Camera.main.transform.position = new Vector3(-6274, 2482, -2981);
-        }
     }
 }
